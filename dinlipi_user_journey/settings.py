@@ -54,9 +54,9 @@ WSGI_APPLICATION = 'dinlipi_user_journey.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'dinlipi_journey',
-        'USER': 'root',
-        'PASSWORD': '',
+        'NAME': 'dinlipisoft_user_journey',
+        'USER': 'dinlipisoft_rasel_odelltech',
+        'PASSWORD': 'rasel@5437',
         'HOST': 'localhost',
         'PORT': '3306',
     }
