@@ -9,7 +9,7 @@ app_name = 'dinlipi_app'
 urlpatterns = [
     # ---- Pages ----
     path('', views.home, name='home'),
-    path('get-started/', views.get_started, name='get_started'),
+    path('get-started/', views.get_started_inquiry, name='get_started'),
 
     # ---- Blog ----
     path('blog/', views.blog_list, name='blog_list'),

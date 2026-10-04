@@ -1,21 +1,14 @@
-"""
-Views for dinlipi_app.
-All pages use class-based or function-based views.
-"""
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.contrib import messages
 from django.http import HttpResponse
+from .models import ContactInquiry
 
-
-# ─── Context helpers ───────────────────────────────────────────────
 def _base_context(page_title, meta_description=''):
-    """Return a base context dict shared by all views."""
     return {
         'page_title': page_title,
         'meta_description': meta_description,
     }
 
-
-# ─── Pages ─────────────────────────────────────────────────────────
 
 def home(request):
     context = _base_context(
@@ -28,11 +21,32 @@ def home(request):
     return render(request, 'dinlipi_app/pages/index.html', context)
 
 
-def get_started(request):
+def get_started_inquiry(request):
     context = _base_context(
         page_title='Get Started — Book a Free Demo | Dinlipi',
         meta_description='Book a free demo of Dinlipi HR & Payroll software for your RMG factory.',
     )
+
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        phone = request.POST.get('phone')
+        company = request.POST.get('company')
+        address = request.POST.get('address')
+        message = request.POST.get('message')
+        
+        contact_inquiry = ContactInquiry(
+            name=name,
+            email=email,
+            phone=phone,
+            company=company,
+            address=address,
+            message=message
+        )
+        contact_inquiry.save()
+        messages.success(request, 'Thank you! We will get back to you soon.')
+        return redirect('dinlipi_app:get_started')
+
     return render(request, 'dinlipi_app/pages/get_started.html', context)
 
 

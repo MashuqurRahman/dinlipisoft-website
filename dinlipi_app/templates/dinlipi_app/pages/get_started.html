@@ -32,51 +32,37 @@
       <div class="gs-form-card" id="contact-form">
         <h2>Contact Sales</h2>
         <p class="gs-form-sub">Tell us about your factory — we'll get back within one business day.</p>
-        <form action="mailto:dinlipisoft@gmail.com?subject=Dinlipi%20Get%20Started" method="get" enctype="text/plain">
+        <form action="" method="post" id="gsForm">
+          {% csrf_token %}
           <div class="gs-form-row">
             <div class="gs-field">
-              <label for="firstName">First Name</label>
-              <input id="firstName" name="First Name" type="text" placeholder="First Name" required/>
+              <label for="fullName">Full Name</label>
+              <input id="fullName" name="name" type="text" placeholder="Full Name" required/>
             </div>
             <div class="gs-field">
-              <label for="lastName">Last Name</label>
-              <input id="lastName" name="Last Name" type="text" placeholder="Last Name" required/>
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="name@company.com" required/>
             </div>
           </div>
           <div class="gs-form-row">
             <div class="gs-field">
-              <label for="email">Work Email</label>
-              <input id="email" name="Work Email" type="email" placeholder="name@company.com" required/>
+              <label for="phone">Phone Number</label>
+              <input id="phone" name="phone" type="text" placeholder="+880 1XXX-XXXXXX" required/>
             </div>
             <div class="gs-field">
-              <label for="phone">Phone Number</label>
-              <input id="phone" name="Phone" type="tel" placeholder="+880 1XXX-XXXXXX" required/>
+              <label for="company">Company Name</label>
+              <input id="company" name="company" type="text" placeholder="Your factory / company name" />
             </div>
           </div>
           <div class="gs-field">
-            <label for="company">Company Name</label>
-            <input id="company" name="Company" type="text" placeholder="Your factory / company name" required/>
+            <label for="address">Address</label>
+            <input id="address" name="address" type="text" placeholder="Your address" />
           </div>
           <div class="gs-field">
             <label for="message">Message</label>
-            <textarea id="message" name="Message" placeholder="Tell us about your needs (attendance, payroll, employee count…)"></textarea>
+            <textarea id="message" name="message" placeholder="Tell us about your needs (attendance, payroll, employee count…)" required></textarea>
           </div>
-          <div class="gs-field">
-            <label>How many employees do you have?</label>
-            <div class="gs-emp" id="empOptions">
-              <label><input type="radio" name="Employees" value="1-20"/> 1–20</label>
-              <label><input type="radio" name="Employees" value="21-50"/> 21–50</label>
-              <label><input type="radio" name="Employees" value="51-100"/> 51–100</label>
-              <label><input type="radio" name="Employees" value="100+"/> 100+</label>
-            </div>
-            <div class="gs-emp-custom">
-              <input id="empCustom" name="Employee Count (custom)" type="number" min="1" placeholder="Or type exact employee count" inputmode="numeric"/>
-            </div>
-          </div>
-          <label class="gs-check">
-            <input type="checkbox" name="Consent" required/>
-            <span>I agree to be contacted about Dinlipi products and services. You can opt out anytime.</span>
-          </label>
+          
           <button class="gs-submit" type="submit">Request a Demo</button>
         </form>
       </div>

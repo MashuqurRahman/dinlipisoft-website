@@ -116,5 +116,31 @@
 <script src="{% static 'js/dinlipi-main.js' %}"></script>
 {% block extra_js %}{% endblock %}
 
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastify-js/1.12.0/toastify.min.css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastify-js/1.12.0/toastify.min.js"></script>
+
+{% if messages %}
+<script>
+  {% for message in messages %}
+  Toastify({
+    text: "{{ message|escapejs }}",
+    duration: 4000,
+    gravity: "top",
+    position: "right",
+    stopOnFocus: true,
+    style: {
+      background: "{% if message.tags == 'success' %}#0d9f6e{% elif message.tags == 'error' %}#dc2626{% elif message.tags == 'warning' %}#f29b09{% else %}#1B4653{% endif %}",
+      borderRadius: "10px",
+      fontSize: "0.9rem",
+      fontWeight: "600",
+      padding: "12px 20px",
+      boxShadow: "0 8px 24px rgba(0,0,0,0.15)"
+    }
+  }).showToast();
+  {% endfor %}
+</script>
+{% endif %}
+
 </body>
 </html>
