@@ -1,0 +1,66 @@
+{% extends "dinlipi_app/base.html" %}
+{% load static %}
+
+{% block title %}{{ page_title }} | Dinlipi{% endblock %}
+
+{% block meta_description %}{{ meta_description }}{% endblock %}
+
+{% block extra_css %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/dinlipi-blog.css' %}"/>
+{% endblock %}
+
+{% block content %}
+<main>
+  <section class="article-wrap">
+    <div class="container">
+      <div class="article-inner">
+        <a class="article-back" href="{% url 'dinlipi_app:blog_list' %}">← Back to Blog</a>
+        <div class="article-tag">HR Tips</div>
+        <h1>Is Your HR Team Spending Too Much Time Updating Excel Sheets?</h1>
+        <div class="article-meta"><span>Aug 10, 2026</span> · <span>7 min read</span></div>
+        <div class="article-body">
+          
+<p>Excel is one of the most widely used tools in business.</p>
+<p>It is flexible, familiar, and useful for many tasks.</p>
+<p>But when an entire HR department depends on multiple spreadsheets for employee management, attendance, leave, overtime, and payroll, problems can start to appear.</p>
+<p>The issue is not Excel itself.</p>
+<p>The issue is using a general-purpose spreadsheet as the primary system for increasingly complex HR operations.</p>
+<h2>The Spreadsheet Dependency Problem</h2>
+<p>Imagine having one spreadsheet for employee records, another for attendance, another for leave, another for overtime, and another for payroll.</p>
+<p>Now imagine updating information across all of them every month.</p>
+<p>The same employee information may need to be entered or modified multiple times.</p>
+<p>This creates repetitive work and increases the chance of inconsistencies.</p>
+<h2>More Employees Means More Complexity</h2>
+<p>A manual HR process may work reasonably well when a company has a small team.</p>
+<p>But as employee numbers grow, the amount of data grows with them.</p>
+<p>More employees mean:</p>
+<ul>
+<li>More attendance records</li>
+<li>More leave requests</li>
+<li>More overtime calculations</li>
+<li>More employee information</li>
+<li>More payroll data</li>
+<li>More reporting requirements</li>
+</ul>
+<p>At some point, HR teams need more than spreadsheets.</p>
+<h2>HR Should Spend Less Time on Repetitive Work</h2>
+<p>HR professionals have responsibilities that go far beyond data entry.</p>
+<p>They need to support employees, manage organizational policies, coordinate recruitment, improve employee experience, and provide useful information to management.</p>
+<p>If a significant amount of their time is spent updating spreadsheets, those higher-value activities can receive less attention.</p>
+<h2>How Dinlipi HRM Can Help</h2>
+<p>Dinlipi HRM provides a centralized HR environment designed to help businesses organize important HR processes.</p>
+<p>By reducing dependence on scattered spreadsheets, businesses can create a more structured approach to employee, attendance, leave, and other HR operations.</p>
+<p>The goal is not to eliminate human involvement.</p>
+<p>It is to eliminate unnecessary repetitive work.</p>
+
+        </div>
+        <div class="article-cta">
+          <p>Ready to move beyond scattered HR spreadsheets? Start organizing your HR workflow with Dinlipi HRM.</p>
+          <a class="btn btn-primary" href="{% url 'dinlipi_app:get_started' %}">Request a Demo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+{% endblock %}

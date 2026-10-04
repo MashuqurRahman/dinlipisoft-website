@@ -1,0 +1,92 @@
+{% extends "dinlipi_app/base.html" %}
+{% load static %}
+
+{% block title %}{{ page_title }} | Dinlipi{% endblock %}
+
+{% block meta_description %}{{ meta_description }}{% endblock %}
+
+{% block extra_css %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/dinlipi-blog.css' %}"/>
+{% endblock %}
+
+{% block content %}
+<main>
+  <section class="blog-hero">
+    <div class="container">
+      <div class="blog-hero-inner">
+        <div class="gs-badge"><span class="dot"></span> Dinlipi Blog</div>
+        <h1>Insights for <span>RMG HR Teams</span></h1>
+        <p class="blog-lead">Practical guides on attendance, payroll, compliance and workforce management for Bangladesh garment factories.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="blog-list-sec">
+    <div class="container">
+      <div class="blog-grid">
+        <article class="blog-card">
+          <div class="blog-card-tag">Payroll</div>
+          <h2><a href="{% url 'dinlipi_app:blog_payroll_processing_software' %}">Why Is Payroll Processing Taking So Much Time?</a></h2>
+          <p>Payroll day becomes stressful when attendance, overtime, leave and deductions live in disconnected sheets. Here’s why — and how structure helps.</p>
+          <div class="blog-meta"><span>Sep 20, 2026</span> · <span>7 min read</span></div>
+        </article>
+        <article class="blog-card">
+          <div class="blog-card-tag">Attendance</div>
+          <h2><a href="{% url 'dinlipi_app:blog_employee_attendance_management_system' %}">Your Attendance Data Exists—But Can You Actually Use It?</a></h2>
+          <p>Recording attendance is only the first step. The real value is when HR can use that data for payroll, leave and workforce decisions.</p>
+          <div class="blog-meta"><span>Sep 12, 2026</span> · <span>7 min read</span></div>
+        </article>
+        <article class="blog-card">
+          <div class="blog-card-tag">Leave</div>
+          <h2><a href="{% url 'dinlipi_app:blog_employee_leave_management' %}">Why Is Employee Leave Management Still a Hassle?</a></h2>
+          <p>Leave requests, balances and approvals get messy when they live in email and spreadsheets. A clear workflow reduces the hassle.</p>
+          <div class="blog-meta"><span>Sep 5, 2026</span> · <span>7 min read</span></div>
+        </article>
+        <article class="blog-card">
+          <div class="blog-card-tag">Employee Data</div>
+          <h2><a href="{% url 'dinlipi_app:blog_employee_management_software' %}">Is Finding Employee Information Taking Too Long?</a></h2>
+          <p>If finding one employee’s full record means opening five files, your data is not organized — and it gets worse as you grow.</p>
+          <div class="blog-meta"><span>Aug 28, 2026</span> · <span>6 min read</span></div>
+        </article>
+        <article class="blog-card">
+          <div class="blog-card-tag">Overtime</div>
+          <h2><a href="{% url 'dinlipi_app:blog_overtime_management_software' %}">Overtime Calculation Shouldn&#x27;t Be a Monthly Headache</a></h2>
+          <p>Overtime ties to attendance and payroll. Manual tracking multiplies errors — structured overtime data keeps month-end calmer.</p>
+          <div class="blog-meta"><span>Aug 18, 2026</span> · <span>6 min read</span></div>
+        </article>
+        <article class="blog-card">
+          <div class="blog-card-tag">HR Tips</div>
+          <h2><a href="{% url 'dinlipi_app:blog_hr_management_software' %}">Is Your HR Team Spending Too Much Time Updating Excel Sheets?</a></h2>
+          <p>Excel is useful — until employee, attendance, leave and payroll each live in a different sheet. Central HR software reduces that load.</p>
+          <div class="blog-meta"><span>Aug 10, 2026</span> · <span>7 min read</span></div>
+        </article>
+        <article class="blog-card">
+          <div class="blog-card-tag">Attendance</div>
+          <h2><a href="{% url 'dinlipi_app:blog_employee_attendance_tracking' %}">Employee Lateness Is More Than Just an Attendance Problem</a></h2>
+          <p>One late day is noise. Repeated patterns matter — and only structured attendance tracking makes those patterns visible.</p>
+          <div class="blog-meta"><span>Aug 2, 2026</span> · <span>6 min read</span></div>
+        </article>
+        <article class="blog-card">
+          <div class="blog-card-tag">Payroll</div>
+          <h2><a href="{% url 'dinlipi_app:blog_hr_payroll_automation' %}">Why Does Payroll Need So Many Manual Checks?</a></h2>
+          <p>Attendance, leave and overtime changes force endless rechecks. Organized HR data reduces the chain of manual payroll work.</p>
+          <div class="blog-meta"><span>Jul 25, 2026</span> · <span>6 min read</span></div>
+        </article>
+        <article class="blog-card">
+          <div class="blog-card-tag">Employee Data</div>
+          <h2><a href="{% url 'dinlipi_app:blog_employee_data_management' %}">Is Your Employee Data Scattered Across Too Many Places?</a></h2>
+          <p>Spreadsheets, email, paper and chat — scattered employee data creates inconsistency. Centralization restores visibility.</p>
+          <div class="blog-meta"><span>Jul 18, 2026</span> · <span>6 min read</span></div>
+        </article>
+        <article class="blog-card">
+          <div class="blog-card-tag">Growth</div>
+          <h2><a href="{% url 'dinlipi_app:blog_hr_software_for_growing_businesses' %}">Your Business Is Growing—Can Your HR Process Keep Up?</a></h2>
+          <p>What works for 20 employees often breaks at 100+. Scalable HR software supports growth without multiplying admin work.</p>
+          <div class="blog-meta"><span>Jul 10, 2026</span> · <span>7 min read</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+{% endblock %}

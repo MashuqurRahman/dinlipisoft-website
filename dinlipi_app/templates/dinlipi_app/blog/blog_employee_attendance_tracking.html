@@ -1,0 +1,59 @@
+{% extends "dinlipi_app/base.html" %}
+{% load static %}
+
+{% block title %}{{ page_title }} | Dinlipi{% endblock %}
+
+{% block meta_description %}{{ meta_description }}{% endblock %}
+
+{% block extra_css %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/dinlipi-blog.css' %}"/>
+{% endblock %}
+
+{% block content %}
+<main>
+  <section class="article-wrap">
+    <div class="container">
+      <div class="article-inner">
+        <a class="article-back" href="{% url 'dinlipi_app:blog_list' %}">← Back to Blog</a>
+        <div class="article-tag">Attendance</div>
+        <h1>Employee Lateness Is More Than Just an Attendance Problem</h1>
+        <div class="article-meta"><span>Aug 2, 2026</span> · <span>6 min read</span></div>
+        <div class="article-body">
+          
+<p>An employee arriving late once may not be a major concern.</p>
+<p>But when lateness becomes a repeated pattern, HR may need to understand what is happening.</p>
+<p>The challenge is that identifying attendance patterns can be difficult when HR teams rely on manual records.</p>
+<p>A spreadsheet may tell you that an employee was late.</p>
+<p>But can it quickly show you how often that employee was late over the last three months?</p>
+<p>Can you compare attendance patterns across departments?</p>
+<p>Can you easily identify repeated absenteeism?</p>
+<p>This is where structured attendance tracking becomes important.</p>
+<h2>Attendance Data Should Tell a Story</h2>
+<p>Attendance data should not simply exist as rows and columns.</p>
+<p>It should help HR teams understand workforce patterns.</p>
+<p>For example, repeated late attendance may require a conversation with an employee. Frequent absences may require further review. Department-level attendance patterns may also help management understand operational challenges.</p>
+<p>None of these conclusions should be made from a single attendance record.</p>
+<p>They require organized information over time.</p>
+<h2>Manual Tracking Makes Pattern Recognition Difficult</h2>
+<p>When attendance records are maintained manually, HR teams may have to search through multiple files to identify patterns.</p>
+<p>This is time-consuming and makes regular monitoring difficult.</p>
+<p>A structured attendance management system can make this information easier to access and review.</p>
+<h2>Better Data, Better HR Visibility</h2>
+<p>The purpose of attendance tracking is not simply to watch employees.</p>
+<p>It is to provide HR with reliable information.</p>
+<p>When HR has better visibility, it becomes easier to identify recurring issues, maintain accurate records, and connect attendance information with other HR processes.</p>
+<h2>How Dinlipi HRM Can Help</h2>
+<p>Dinlipi HRM helps businesses organize employee attendance information within a centralized HR workflow.</p>
+<p>This can make it easier for HR teams to review attendance records, manage related HR processes, and maintain better visibility into workforce attendance.</p>
+
+        </div>
+        <div class="article-cta">
+          <p>Get clearer visibility into employee attendance with Dinlipi HRM.</p>
+          <a class="btn btn-primary" href="{% url 'dinlipi_app:get_started' %}">Request a Demo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+{% endblock %}

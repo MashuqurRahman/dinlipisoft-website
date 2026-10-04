@@ -1,0 +1,56 @@
+{% extends "dinlipi_app/base.html" %}
+{% load static %}
+
+{% block title %}{{ page_title }} | Dinlipi{% endblock %}
+
+{% block meta_description %}{{ meta_description }}{% endblock %}
+
+{% block extra_css %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/dinlipi-blog.css' %}"/>
+{% endblock %}
+
+{% block content %}
+<main>
+  <section class="article-wrap">
+    <div class="container">
+      <div class="article-inner">
+        <a class="article-back" href="{% url 'dinlipi_app:blog_list' %}">← Back to Blog</a>
+        <div class="article-tag">Overtime</div>
+        <h1>Overtime Calculation Shouldn&#x27;t Be a Monthly Headache</h1>
+        <div class="article-meta"><span>Aug 18, 2026</span> · <span>6 min read</span></div>
+        <div class="article-body">
+          
+<p>For many businesses, overtime is an important part of workforce management.</p>
+<p>But calculating overtime accurately can become difficult when the process is manual.</p>
+<p>HR teams may need to check working hours, attendance records, approved overtime, employee schedules, and payroll information before calculating the final amount.</p>
+<p>When employee numbers increase, this becomes even more complicated.</p>
+<h2>Why Manual Overtime Tracking Creates Problems</h2>
+<p>Manual overtime tracking often involves spreadsheets or separate attendance records.</p>
+<p>HR may have to compare an employee's working hours with the company's overtime rules and then manually calculate the additional amount.</p>
+<p>A small data error can create an incorrect calculation.</p>
+<p>And when there are hundreds of employees, checking every overtime record manually can take a significant amount of time.</p>
+<h2>Overtime Is Connected to Payroll</h2>
+<p>One important reason overtime management needs to be accurate is its connection to payroll.</p>
+<p>If overtime information is incorrect, salary calculations may also be affected.</p>
+<p>This means HR teams often have to spend additional time verifying overtime records before payroll is finalized.</p>
+<p>The more disconnected the systems are, the more effort is required to ensure that the information is consistent.</p>
+<h2>A More Organized Approach</h2>
+<p>An overtime management system can help businesses maintain overtime information in a structured way.</p>
+<p>Instead of relying entirely on manual calculations and scattered records, HR teams can work with centralized information.</p>
+<p>This can make it easier to review overtime records and prepare relevant payroll information.</p>
+<h2>How Dinlipi HRM Can Help</h2>
+<p>Dinlipi HRM helps businesses manage attendance and overtime-related HR information in a more organized environment.</p>
+<p>For businesses with multiple employees, departments, or working schedules, having structured overtime information can reduce repetitive administrative work.</p>
+<p>The result is a more manageable HR workflow and better visibility into employee working hours.</p>
+
+        </div>
+        <div class="article-cta">
+          <p>Make overtime tracking easier and more organized with Dinlipi HRM.</p>
+          <a class="btn btn-primary" href="{% url 'dinlipi_app:get_started' %}">Request a Demo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+{% endblock %}
