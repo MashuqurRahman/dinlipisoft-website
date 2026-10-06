@@ -1,3 +1,6 @@
-from django.core.wsgi import get_wsgi_application
+import imp
+import os
+import sys
 
-application = get_wsgi_application()
+
+from dinlipi_user_journey.wsgi import application
