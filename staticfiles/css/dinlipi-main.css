@@ -3511,6 +3511,38 @@
       background: #f8fafc;
     }
 
+    /* MODAL DESIGN */
+
+    .contact-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 24px;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      color: #fff;
+      text-decoration: none;
+      transition: opacity 0.2s ease, transform 0.15s ease;
+      white-space: nowrap;
+    }
+
+    .contact-btn:hover {
+      color: #fff;
+      opacity: 0.88;
+      transform: translateY(-1px);
+    }
+
+    .contact-btn img {
+      width: 22px;
+      height: 22px !important;
+      object-fit: contain;
+    }
+
+    .whatsapp-btn  { background-color: #25D366 !important; }
+    .call-btn { background-color: #1C5FA8; }
+    .messenger-btn { background-color: #7B2FBE; }
+
     /* ========== FOOTER ========== */
     footer {
       background: #15213c;
@@ -6967,7 +6999,7 @@ table {
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     box-shadow: 0 8px 32px rgba(27,70,83,0.16);
-    padding: 30px 24px 250px;
+    padding: 30px 24px 280px;
     z-index: 110;
     overflow-y: hidden;
   }
@@ -8341,4 +8373,8 @@ a.wa-float,
     right: max(12px, env(safe-area-inset-right, 0px)) !important;
     bottom: max(12px, env(safe-area-inset-bottom, 0px)) !important;
   }
+}
+
+.body {
+    background: red !important;
 }

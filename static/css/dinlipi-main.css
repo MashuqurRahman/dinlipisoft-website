@@ -3535,7 +3535,7 @@
 
     .contact-btn img {
       width: 22px;
-      height: 22px;
+      height: 22px !important;
       object-fit: contain;
     }
 
@@ -8373,4 +8373,8 @@ a.wa-float,
     right: max(12px, env(safe-area-inset-right, 0px)) !important;
     bottom: max(12px, env(safe-area-inset-bottom, 0px)) !important;
   }
+}
+
+.body {
+    background: red !important;
 }
