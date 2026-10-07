@@ -4219,6 +4219,20 @@
       .rs-node-icon { font-size: 12px; }
       .rs-center img { width: 100px; }
       .rs-details { max-width: 100%; width: 100%; min-width: 0; }
+
+      /* contact modal css */
+      .modal-body.px-4.py-5.text-center h2 {
+        font-size: 22px !important;
+      }
+      .modal-body.px-4.py-5.text-center p {
+        font-size: 13px !important;
+        margin-bottom: 24px !important;
+      }
+      .contact-btn {
+        padding: 8px 15px;
+        font-size: 12px;
+      }
+      
     }
 
   
