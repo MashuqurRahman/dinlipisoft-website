@@ -49,6 +49,12 @@ def get_started_inquiry(request):
 
     return render(request, 'dinlipi_app/pages/get_started.html', context)
 
+def privacy_and_policy_views(request):
+    return render(request, 'dinlipi_app/pages/privacy_policy.html')
+
+def terms_and_conditions_views(request):
+    return render(request, 'dinlipi_app/pages/terms_conditions.html')
+
 
 # ─── Blog list ─────────────────────────────────────────────────────
 

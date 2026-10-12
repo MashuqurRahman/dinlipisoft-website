@@ -10,6 +10,9 @@ urlpatterns = [
     # ---- Pages ----
     path('', views.home, name='home'),
     path('get-started/', views.get_started_inquiry, name='get_started'),
+    path('privacy-policy/', views.privacy_and_policy_views, name='privacy_policy'),
+    path('terms-conditions/', views.terms_and_conditions_views, name='terms_conditions'),
+
 
     # ---- Blog ----
     path('blog/', views.blog_list, name='blog_list'),
